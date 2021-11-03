@@ -1,0 +1,35 @@
+﻿{
+  "Discord": {
+    "InviteMessage": "Spread the word, our trusted scout! Spread the word of our kingdom! Amass an army of knowledge seeking minions! Lay waste to the legions of doubt and uncertainty!!",
+    "InviteLink": "https://discord.gg/7geGwSET5B",
+    "InviteFooter": "Minions of knowledge! Assembblleeee!",
+    "InviteImage": "https://unofficialdevrycom.dev/images/Stein-Hogwarts-1200.jpg",
+
+    "MainGuildId": 885538658533376020,
+    "WelcomeChannelId": 885538658533376023,
+    "HelpChannelId": 885538658533376023,
+    "GeneralChannelId": 885538658533376023,
+
+    "BlacklistedRoles": [
+      "@everyone",
+      "Admin",
+      "Mod",
+      "Staff",
+      "President",
+      "Vice President",
+      "Head of Finance",
+      "Head of Operations",
+      "Head of Relations",
+      "Community Leader",
+      "Board Members",
+      "Advisors",
+      "Club Members",
+      "Junior Contributor",
+      "Mid Contributor",
+      "Junior Contributor",
+      "Founder",
+      "Alumni",
+      "Booster"
+    ]
+  }
+}

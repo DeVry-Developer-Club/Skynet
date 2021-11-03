@@ -1,0 +1,26 @@
+﻿{
+  "ImageSearchOptions": {
+    "ProgrammingKeywords": [
+      "coding",
+      "developer",
+      "programming",
+      "code",
+      "technology",
+      "programmer",
+      "computer",
+      "html",
+      "tech",
+      "web-development",
+      "hacker"
+    ],
+
+    "WelcomeKeywords": [
+      "welcome",
+      "welcome-sign"
+    ],
+
+    "StartOfDayKeywords": [
+      "good-morning"
+    ]
+  }
+}

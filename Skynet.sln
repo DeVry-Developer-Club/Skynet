@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31815.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skynet", "Skynet\Skynet.csproj", "{376F9592-7AA7-403E-88AE-9A60E507F698}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skynet.SnippetAssistant", "Skynet.SnippetAssistant\Skynet.SnippetAssistant.csproj", "{5780CDE5-13EA-492A-8B20-3EB2369905DC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skynet.Core", "Skynet.Core\Skynet.Core.csproj", "{BF1E58C3-5791-4F3E-BDBA-4A32E8405F77}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skynet.ImageCreator", "Skynet.ImageCreator\Skynet.ImageCreator.csproj", "{A6FDB3F1-25F6-4681-9CFF-0016EAC8E09B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skynet.QuoteService", "Skynet.QuoteService\Skynet.QuoteService.csproj", "{D4910D9C-3E55-4587-BE64-92DA79BE000B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skynet.WebHost", "Skynet.WebHost\Skynet.WebHost.csproj", "{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{376F9592-7AA7-403E-88AE-9A60E507F698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{376F9592-7AA7-403E-88AE-9A60E507F698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{376F9592-7AA7-403E-88AE-9A60E507F698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{376F9592-7AA7-403E-88AE-9A60E507F698}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5780CDE5-13EA-492A-8B20-3EB2369905DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5780CDE5-13EA-492A-8B20-3EB2369905DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5780CDE5-13EA-492A-8B20-3EB2369905DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5780CDE5-13EA-492A-8B20-3EB2369905DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF1E58C3-5791-4F3E-BDBA-4A32E8405F77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF1E58C3-5791-4F3E-BDBA-4A32E8405F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF1E58C3-5791-4F3E-BDBA-4A32E8405F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF1E58C3-5791-4F3E-BDBA-4A32E8405F77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6FDB3F1-25F6-4681-9CFF-0016EAC8E09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6FDB3F1-25F6-4681-9CFF-0016EAC8E09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6FDB3F1-25F6-4681-9CFF-0016EAC8E09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6FDB3F1-25F6-4681-9CFF-0016EAC8E09B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4910D9C-3E55-4587-BE64-92DA79BE000B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4910D9C-3E55-4587-BE64-92DA79BE000B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4910D9C-3E55-4587-BE64-92DA79BE000B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4910D9C-3E55-4587-BE64-92DA79BE000B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D98694D-A98E-46F3-B420-F209FDCB2691}
+	EndGlobalSection
+EndGlobal
