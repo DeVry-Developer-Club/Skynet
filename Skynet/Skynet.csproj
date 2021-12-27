@@ -14,9 +14,9 @@
 		<PackageReference Include="DisCatSharp.Hosting" Version="9.8.4-nightly-00189" />
 		<PackageReference Include="DisCatSharp.Hosting.DependencyInjection" Version="9.8.4-nightly-00189" />
 		<PackageReference Include="DisCatSharp.Interactivity" Version="9.8.4-nightly-00189" />
-		<PackageReference Include="Google.Protobuf" Version="3.8.0" />
-		<PackageReference Include="Grpc" Version="2.23.0" />
-		<PackageReference Include="Grpc.Tools" Version="2.23.0" PrivateAssets="All" />
+		<PackageReference Include="Google.Protobuf" Version="3.19.1" />
+		<PackageReference Include="Grpc" Version="2.41.1" />
+		<PackageReference Include="Grpc.Tools" Version="2.41.1" PrivateAssets="All" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -24,6 +24,13 @@
 	  <ProjectReference Include="..\Skynet.ImageCreator\Skynet.ImageCreator.csproj" />
 	  <ProjectReference Include="..\Skynet.QuoteService\Skynet.QuoteService.csproj" />
 	  <ProjectReference Include="..\Skynet.SnippetAssistant\Skynet.SnippetAssistant.csproj" />
+	  <ProjectReference Include="C:\Users\jonbr_2lj7acl\source\repos\DeVry-Developer-Club\Engineers-Notebook\EngineerNotebook.GrpcContracts\EngineerNotebook.GrpcContracts.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="EngineerNotebook.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+	    <HintPath>C:\Users\jonbr_2lj7acl\source\repos\DeVry-Developer-Club\Engineers-Notebook\EngineerNotebook.Shared\bin\Debug\net6.0\EngineerNotebook.Shared.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 </Project>

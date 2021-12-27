@@ -42,6 +42,8 @@ public class WelcomeHandler : IWelcomeHandler
         _cancellationToken = default;
         _logger = logger;
         _options = options;
+        
+        // TODO: Revisit this feature to avoid circular dependency via DI (silently fails)
         //_welcomeChannel = bot.Client.Guilds[discordOptions.MainGuildId].Channels[discordOptions.WelcomeChannelId];
         //Task.Run(ProcessQueue);
     }

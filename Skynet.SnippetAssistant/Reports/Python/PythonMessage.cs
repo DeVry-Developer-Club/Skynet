@@ -2,7 +2,7 @@
 
 namespace Skynet.SnippetAssistant.Reports.Python;
 
-internal class PythonMessage : IMessage
+public class PythonMessage : IMessage
 {
     public string Source { get; set; }
     public string Code { get; set; }
@@ -11,7 +11,7 @@ internal class PythonMessage : IMessage
     public string CommentedCode { get; set; }
 }
 
-internal class PythonLocation
+public class PythonLocation
 {
     public string Path { get; set; }
     public string Module { get; set; }

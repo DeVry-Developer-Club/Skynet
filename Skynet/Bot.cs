@@ -11,12 +11,11 @@ using Interfaces;
 using Options;
 using DisCatSharp.Entities;
 using System.Reflection;
-using Skynet.Discord.Attributes;
-using Skynet.QuoteService.Interfaces;
-using Skynet.Services;
+using Discord.Attributes;
+using Services;
 using Skynet.ImageCreator.Utilities;
 using Skynet.ImageCreator.Interfaces;
-using Skynet.Extensions;
+using Extensions;
 
 public class Bot : DiscordHostedService
 {
@@ -27,11 +26,19 @@ public class Bot : DiscordHostedService
     private readonly Images _imageUtility = new();
     private readonly IImageService _imageService;
     private readonly ImageSearchOptions _searchOptions;
+    private readonly EngineersNotebookService _notebookService;
+
+    /// <summary>
+    /// Shall be used to help determine if/when the bot should
+    /// try encouraging community participation
+    /// </summary>
+    internal DateTime LastMessageOn = DateTime.Now;
 
     public Bot(IConfiguration config, ILogger<Bot> logger, 
         DiscordOptions options,
         ImageSearchOptions searchOptions,
         IImageService imageService,
+        EngineersNotebookService notebookService,
         IServiceProvider provider, IHostApplicationLifetime lifetime) : base(config, logger, provider, lifetime)
     {
         _serviceProvider = provider;
@@ -39,17 +46,21 @@ public class Bot : DiscordHostedService
         _welcomeHandler = provider.GetRequiredService<IWelcomeHandler>();
         _options = options;
         _searchOptions = searchOptions;
+        _notebookService = notebookService;
 
         Client.ComponentInteractionCreated += ClientOnComponentInteractionCreated;
         Client.GuildMemberAdded += Client_GuildMemberAdded;
         Client.MessageCreated += Client_MessageCreated;
-    }
+        Client.GuildMemberRemoved += Client_GuildMemberRemoved;
+    }    
 
     private async Task Client_MessageCreated(DiscordClient sender, MessageCreateEventArgs e)
     {
         if (e.Author.IsBot)
             return;
-        
+
+        LastMessageOn = DateTime.Now;
+
         if(e.Message.Content.StartsWith("test-quotes"))
         {
             var quotes = _serviceProvider.GetRequiredService<QuoteHandler>();
@@ -64,6 +75,22 @@ public class Bot : DiscordHostedService
             await e.Channel.SendMessageAsync(new DiscordMessageBuilder()
             .WithFile(file));
             file.Close();
+        }
+        else
+        {
+            var response = await _notebookService.FindGuide(e.Message.Content);
+
+            if (!response.success || response.pdfGuide is null)
+                return;
+
+            using var stream = new MemoryStream(response.pdfGuide);
+
+            var messageBuilder = new DiscordMessageBuilder()
+                .WithFile($"{e.Author.Username}-guide.pdf", stream, true);
+
+            messageBuilder.Content = $"Hey, {e.Author.Username}, found something that might help you out";
+
+            await e.Channel.SendMessageAsync(messageBuilder);
         }
     }
 
@@ -100,6 +127,12 @@ public class Bot : DiscordHostedService
             if(!string.IsNullOrEmpty(image))
                 File.Delete(image);
         }        
+    }
+
+    private Task Client_GuildMemberRemoved(DiscordClient sender, GuildMemberRemoveEventArgs e)
+    {
+        Logger.LogWarning($"We lost a member: {e.Member.UsernameWithDiscriminator}");
+        return Task.CompletedTask;
     }
 
     /// <summary>

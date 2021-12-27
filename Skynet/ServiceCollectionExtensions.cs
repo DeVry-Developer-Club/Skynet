@@ -37,6 +37,7 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<IWelcomeHandler, WelcomeHandler>();
         services.AddSingleton<IRoleService, RoleService>();
         services.AddSingleton<IStorageService, StorageService>();
+        services.AddSingleton<EngineersNotebookService>();
         services.AddImageCreatorServices();
         
         services.AddQuoteServices();

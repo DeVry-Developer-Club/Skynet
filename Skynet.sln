@@ -11,9 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skynet.Core", "Skynet.Core\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skynet.ImageCreator", "Skynet.ImageCreator\Skynet.ImageCreator.csproj", "{A6FDB3F1-25F6-4681-9CFF-0016EAC8E09B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skynet.QuoteService", "Skynet.QuoteService\Skynet.QuoteService.csproj", "{D4910D9C-3E55-4587-BE64-92DA79BE000B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skynet.QuoteService", "Skynet.QuoteService\Skynet.QuoteService.csproj", "{D4910D9C-3E55-4587-BE64-92DA79BE000B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skynet.WebHost", "Skynet.WebHost\Skynet.WebHost.csproj", "{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skynet.WebHost", "Skynet.WebHost\Skynet.WebHost.csproj", "{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F6848632-684F-4A1D-9636-FB386F078E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skynet.MessageTests", "Skynet.MessageTests\Skynet.MessageTests.csproj", "{78ACC589-5475-462E-BB2F-ECA7F3FFA514}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +49,16 @@ Global
 		{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A51A4E4-B370-4E10-ADB3-E6EFE6B072A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78ACC589-5475-462E-BB2F-ECA7F3FFA514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78ACC589-5475-462E-BB2F-ECA7F3FFA514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78ACC589-5475-462E-BB2F-ECA7F3FFA514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78ACC589-5475-462E-BB2F-ECA7F3FFA514}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{78ACC589-5475-462E-BB2F-ECA7F3FFA514} = {F6848632-684F-4A1D-9636-FB386F078E06}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D98694D-A98E-46F3-B420-F209FDCB2691}
